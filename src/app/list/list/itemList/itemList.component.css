@@ -1,0 +1,9 @@
+.progress_complete{
+    border-color: rgb(156, 253, 0);
+    background-color: rgba(21, 230, 66, 0.678);
+}
+
+li {
+    font-size: 2em
+}
+

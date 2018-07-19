@@ -1,0 +1,24 @@
+<div class="container ">
+  <div class="row">
+    <div class="col-10">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-primary"
+          [ngClass]="{'progress_complete': onProgressComplete(item)}" *ngFor="let item of productsList; let i = index">
+            <div class="input-group-prepend">
+              <div >
+                <button class="btn-primary" (click)="onChangeProg(i)"> Status </button>
+              </div>
+            </div>
+          <span class="item_number">{{ i + 1 }}.</span>
+          {{ item.productName }}
+          <span class="badge badge-pill badge-success">
+            {{ item.progressListProducts }}
+          </span>
+          <button class="close" aria-label="Close" (click)="onRemoveProd(i)">
+            <img src="https://png.icons8.com/ios/2x/delete-forever-filled.png">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
